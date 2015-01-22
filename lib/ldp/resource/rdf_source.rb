@@ -17,9 +17,7 @@ module Ldp
 
     def create
       super do |req|
-        if req.headers["Content-Type"] != "text/turtle"
-          req.headers["Content-Type"] = "text/turtle"
-        end
+        req.headers["Content-Type"] = "text/turtle"
       end
     end
 
